@@ -1,13 +1,7 @@
 const router = require('express').Router();
-const { celebrate, Joi } = require('celebrate');
 const { login } = require('../controllers/users');
-const { emailRegex } = require('../utils/constants');
+const { loginValidation } = require('../middlewares/validation');
 
-router.post('/', celebrate({
-  body: Joi.object().keys({
-    email: Joi.string().required().pattern(emailRegex),
-    password: Joi.string().required(),
-  }),
-}), login);
+router.post('/', loginValidation, login);
 
 module.exports = router;
