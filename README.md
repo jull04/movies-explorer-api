@@ -4,7 +4,7 @@
 
 #  Домен, по которому можно обратиться к серверу:
 
-api.juls.diplom.nomoredomainsrocks.ru
+https://api.juls.diplom.nomoredomainsrocks.ru
 
 # Запуск проекта
 
